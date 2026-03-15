@@ -1058,26 +1058,6 @@ window.open(url,"_blank");
 
 }
 
-const menuToggle = document.getElementById("menuToggle")
-const navMenu = document.getElementById("navMenu")
-
-/* open / close menu */
-
-menuToggle.addEventListener("click", function(){
-    navMenu.classList.toggle("active")
-})
-
-/* close when clicking outside */
-
-document.addEventListener("click", function(e){
-
-    if(!navMenu.classList.contains("active")) return
-
-    if(!navMenu.contains(e.target) && !menuToggle.contains(e.target)){
-        navMenu.classList.remove("active")
-    }
-
-})
 
 
 
