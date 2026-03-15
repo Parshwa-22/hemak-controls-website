@@ -1080,7 +1080,29 @@ window.open(url,"_blank");
 
 const industryBoxes = document.querySelectorAll('.industry-item')
 
+let isUserClicked = false
 let currentActive = null
+
+/* CLICK BEHAVIOUR */
+
+industryBoxes.forEach(box => {
+
+    box.addEventListener("click", function(){
+
+        industryBoxes.forEach(b=>{
+            b.classList.remove("active")
+        })
+
+        this.classList.add("active")
+        currentActive = this
+        isUserClicked = true
+
+    })
+
+})
+
+
+/* SCROLL BEHAVIOUR */
 
 const industryObserver = new IntersectionObserver((entries)=>{
 
@@ -1088,11 +1110,15 @@ const industryObserver = new IntersectionObserver((entries)=>{
 
         if(entry.isIntersecting){
 
-            if(currentActive){
-                currentActive.classList.remove('active')
+            if(isUserClicked){
+                return
             }
 
-            entry.target.classList.add('active')
+            if(currentActive){
+                currentActive.classList.remove("active")
+            }
+
+            entry.target.classList.add("active")
             currentActive = entry.target
 
         }
@@ -1107,6 +1133,24 @@ industryBoxes.forEach(box=>{
     industryObserver.observe(box)
 })
 
+
+/* WHEN USER STARTS SCROLLING */
+
+window.addEventListener("scroll", ()=>{
+
+    if(isUserClicked){
+
+        industryBoxes.forEach(b=>{
+            b.classList.remove("active")
+        })
+
+        currentActive = null
+        isUserClicked = false
+
+    }
+
+})
+What this fixes
     </script>
 </body>
 </html>
