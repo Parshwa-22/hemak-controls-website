@@ -681,9 +681,13 @@
 
             <div class="hero-btns">
                 <a href="#contact" class="btn btn-gold">Request A Technical Quote</a>
-                <a href="https://wa.me/919663929707" class="btn btn-wa" style="background: var(--success); color: white;">
-                    <i class="fab fa-whatsapp"></i> Chat with Sales
-                </a>
+              <a href="https://wa.me/919663929707?text=Hello%20Hemak%20Controls,%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20Electrical%20Control%20Panels%20and%20Industrial%20Automation%20solutions.%20Please%20share%20more%20details." 
+class="btn btn-wa" 
+style="background: var(--success); color: white;" 
+target="_blank">
+
+<i class="fab fa-whatsapp"></i> Chat with Sales
+</a>
             </div>
         </div>
     </section>
@@ -878,28 +882,58 @@
 </section>
 
     <section class="contact section-padding" id="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info-panel" style="background: var(--primary); color: white; padding: 40px; border-radius: 15px;">
-                    <h2 style="color: var(--accent); margin-bottom: 25px;">Let's Talk Technology</h2>
-                    <div style="margin-bottom: 20px;"><i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 10px;"></i> 1st Cross, New Goods Shed Road, Chintamani Chambers, Belagavi, Karnataka - 590001</div>
-                    <div style="margin-bottom: 20px;"><i class="fas fa-user-shield" style="color: var(--accent); margin-right: 10px;"></i> Contact: Nitin D Budavi</div>
-                    <div style="margin-bottom: 20px;"><i class="fas fa-phone-alt" style="color: var(--accent); margin-right: 10px;"></i> +91 9663929707</div>
-                    <div style="margin-bottom: 20px;"><i class="fas fa-id-badge" style="color: var(--accent); margin-right: 10px;"></i> GSTIN: 29AMZPB5802A2Z3</div>
-                </div>
 
-                <div class="enquiry-form">
-                    <h3>Submit Your Requirement</h3>
-                    <form>
-                        <div class="form-group"><label>Full Name</label><input type="text" placeholder="Varad Nakate"></div>
-                        <div class="form-group"><label>Mobile Number</label><input type="tel" placeholder="+91"></div>
-                        <div class="form-group"><label>Message</label><textarea rows="4" placeholder="Describe requirement..."></textarea></div>
-                        <button type="submit" class="btn btn-navy" style="width: 100%;">Submit Enquiry</button>
-                    </form>
-                </div>
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <div class="contact-info-panel" style="background: var(--primary); color: white; padding: 40px; border-radius: 15px;">
+
+                <h2 style="color: var(--accent); margin-bottom: 25px;">Let's Talk Technology</h2>
+
+                <div style="margin-bottom: 20px;"><i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 10px;"></i> 1st Cross, New Goods Shed Road, Chintamani Chambers, Belagavi, Karnataka - 590001</div>
+
+                <div style="margin-bottom: 20px;"><i class="fas fa-user-shield" style="color: var(--accent); margin-right: 10px;"></i> Contact: Nitin D Budavi</div>
+
+                <div style="margin-bottom: 20px;"><i class="fas fa-phone-alt" style="color: var(--accent); margin-right: 10px;"></i> +91 9663929707</div>
+
+                <div style="margin-bottom: 20px;"><i class="fas fa-id-badge" style="color: var(--accent); margin-right: 10px;"></i> GSTIN: 29AMZPB5802A2Z3</div>
+
             </div>
+
+
+            <div class="enquiry-form">
+
+                <h3>Submit Your Requirement</h3>
+
+                <form onsubmit="sendEnquiry(event)">
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="name" placeholder="Varad Nakate">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="tel" id="phone" placeholder="+91">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="message" rows="4" placeholder="Describe requirement..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-navy" style="width: 100%;">Submit Enquiry</button>
+
+                </form>
+
+            </div>
+
         </div>
-    </section>
+
+    </div>
+
+</section>
 
     <footer>
         <div class="container">
@@ -987,6 +1021,42 @@ loading="lazy">
             });
         });
         counters.forEach(c => observer.observe(c));
+
+
+function sendEnquiry(event){
+
+event.preventDefault();
+
+var name = document.getElementById("name").value.trim();
+var phone = document.getElementById("phone").value.trim();
+var message = document.getElementById("message").value.trim();
+
+if(name === ""){
+alert("Please enter your Full Name");
+return;
+}
+
+if(phone === ""){
+alert("Please enter your Mobile Number");
+return;
+}
+
+if(!/^[0-9]{10}$/.test(phone)){
+alert("Please enter a valid 10 digit Mobile Number");
+return;
+}
+
+var text =
+"New Website Enquiry%0A%0A"+
+"Name: " + name + "%0A"+
+"Phone: " + phone + "%0A"+
+"Message: " + message;
+
+var url = "https://wa.me/919663929707?text=" + text;
+
+window.open(url,"_blank");
+
+}
     </script>
 </body>
 </html>
