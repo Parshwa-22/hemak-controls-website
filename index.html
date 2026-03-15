@@ -600,12 +600,124 @@
             width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; outline: none;
         }
 
-        footer { background: #051626; color: #fff; padding: 80px 0 20px; }
+
+
+        /* =========================================
+           9. PROFESSIONAL FOOTER STYLES
+           ========================================= */
+        footer { 
+            background: #051626; 
+            color: #ffffff; 
+            padding: 80px 0 30px; 
+            border-top: 4px solid var(--accent);
+        }
+
         .footer-top {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 2fr;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
             gap: 40px;
             margin-bottom: 50px;
+        }
+
+        .footer-logo h2 {
+            color: var(--accent);
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .footer-logo p {
+            color: #bdc3c7;
+            font-size: 14px;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .footer-links h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--white);
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 35px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .footer-links ul { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 12px; }
+
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 8px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .social-icon:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        /* Responsive Map Container */
+        .footer-links iframe {
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            filter: grayscale(0.2) contrast(1.1);
+            transition: var(--transition);
+        }
+
+        .footer-links iframe:hover {
+            filter: grayscale(0);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 30px;
+            font-size: 13px;
+            color: #7f8c8d;
+            letter-spacing: 0.5px;
         }
 
         /* =========================================
@@ -997,39 +1109,58 @@ target="_blank">
 
 </section>
 
-    <footer>
+   <footer>
         <div class="container">
             <div class="footer-top">
-                <div>
-                    <h2 style="color: var(--accent); font-family: 'Oswald';">HEMAK CONTROLS</h2>
-                    <p>Excellence in Electrical Engineering & Industrial Automation since 2011.</p>
+                <div class="footer-logo">
+                    <h2>HEMAK CONTROLS</h2>
+                    <p>Providing cutting-edge Electrical Control Panels and Industrial Automation solutions since 2011. A Class One Licensed Government Contractor committed to engineering excellence.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1FxGLYxRo3/" target="_blank" class="social-icon" title="Follow us on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-                <div>
-                    <h4>Navigation</h4>
-                    <ul style="list-style: none; padding-top: 15px;">
-                        <li><a href="#home" style="color: #aaa; text-decoration: none;">Home</a></li>
-                        <li><a href="#about" style="color: #aaa; text-decoration: none;">About</a></li>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> About Us</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Our Services</a></li>
+                        <li><a href="#projects"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Portfolio</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4>Expertise</h4>
-                    <ul style="list-style: none; padding-top: 15px;">
-                        <li>PLC Panels</li>
-                        <li>SCADA Systems</li>
+
+                <div class="footer-links">
+                    <h4>Our Expertise</h4>
+                    <ul>
+                        <li><a href="#services"><i class="fas fa-check" style="color: var(--accent); font-size: 10px;"></i> PLC Control Panels</a></li>
+                        <li><a href="#services"><i class="fas fa-check" style="color: var(--accent); font-size: 10px;"></i> SCADA Systems</a></li>
+                        <li><a href="#services"><i class="fas fa-check" style="color: var(--accent); font-size: 10px;"></i> MCC & PCC Panels</a></li>
+                        <li><a href="#services"><i class="fas fa-check" style="color: var(--accent); font-size: 10px;"></i> VFD Drive Systems</a></li>
                     </ul>
                 </div>
-                <div>
-                    <iframe
-src="https://www.google.com/maps?q=Hemak%20Controls%20Belagavi%20Karnataka&output=embed"
-width="100%"
-height="250"
-style="border:0;"
-loading="lazy">
-</iframe>
+
+                <div class="footer-links">
+                    <h4>Locate Us</h4>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.212345678901!2d74.50!3d15.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf669f!2zQmVsYWdhdmlsw!5e0!3m2!1sen!2sin!4v1700000000000" 
+                            width="100%" 
+                            height="160" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
                 </div>
             </div>
-            <div style="text-align: center; border-top: 1px solid #222; padding-top: 20px; font-size: 12px; color: #666;">
-                © 2026 Hemak Controls. All Rights Reserved.
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hemak Controls. All Rights Reserved. | Designed for Engineering Excellence</p>
             </div>
         </div>
     </footer>
