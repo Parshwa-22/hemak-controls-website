@@ -1110,9 +1110,7 @@ const industryObserver = new IntersectionObserver((entries)=>{
 
         if(entry.isIntersecting){
 
-            if(isUserClicked){
-                return
-            }
+            if(isUserClicked) return
 
             if(currentActive){
                 currentActive.classList.remove("active")
@@ -1134,7 +1132,7 @@ industryBoxes.forEach(box=>{
 })
 
 
-/* WHEN USER STARTS SCROLLING */
+/* RESET CLICK WHEN USER SCROLLS */
 
 window.addEventListener("scroll", ()=>{
 
@@ -1150,7 +1148,6 @@ window.addEventListener("scroll", ()=>{
     }
 
 })
-What this fixes
     </script>
 </body>
 </html>
