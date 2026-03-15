@@ -1058,6 +1058,8 @@ window.open(url,"_blank");
 
 }
 
+document.addEventListener("DOMContentLoaded", function(){
+
 const menuToggle = document.getElementById("menuToggle")
 const navMenu = document.getElementById("navMenu")
 
@@ -1074,6 +1076,8 @@ document.addEventListener("click", function(event){
     if(!isClickInsideMenu && !isClickOnButton){
         navMenu.classList.remove("active")
     }
+
+})
 
 })
 
