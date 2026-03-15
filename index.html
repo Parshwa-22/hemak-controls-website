@@ -270,8 +270,7 @@
             margin-bottom: 50px;
             flex-wrap: wrap;
         }
-
-      .trust-badge-card{
+.trust-badge-card{
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255,255,255,0.2);
@@ -282,22 +281,21 @@
     gap: 15px;
     min-width: 220px;
 
-    transition: all 0.35s ease;
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
 
-       .trust-badge-card i{
+   .trust-badge-card i{
     font-size: 32px;
     color: var(--accent);
     transition: transform 0.35s ease;
 }
-
-        .trust-badge-card:hover{
-    transform: translateY(-10px);
+.trust-badge-card:hover{
+    transform: translateY(-8px);
     box-shadow: 0 18px 40px rgba(0,0,0,0.18);
 }
 
 .trust-badge-card:hover i{
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
         @keyframes badgeFadeUp{
@@ -311,7 +309,7 @@
     }
 }
         .trust-badge-card{
-    animation: badgeFadeUp 0.8s ease forwards;
+  
 }
 
         .trust-badge-card:nth-child(1){
