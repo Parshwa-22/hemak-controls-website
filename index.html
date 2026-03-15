@@ -980,18 +980,31 @@ loading="lazy">
     </div>
 
     <script>
-        // Responsive Menu Toggle Logic
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
+       const menuToggle = document.getElementById('menuToggle')
+const navMenu = document.getElementById('navMenu')
 
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+menuToggle.addEventListener('click', function(e){
+    e.stopPropagation()
+    navMenu.classList.toggle('active')
+})
 
-        // Close menu on link click
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => navMenu.classList.remove('active'));
-        });
+document.addEventListener('click', function(e){
+
+    const clickInsideMenu = navMenu.contains(e.target)
+    const clickOnButton = menuToggle.contains(e.target)
+
+    if(!clickInsideMenu && !clickOnButton){
+        navMenu.classList.remove('active')
+    }
+
+})
+
+// Close when clicking menu links
+document.querySelectorAll('.nav-menu a').forEach(link=>{
+    link.addEventListener('click', ()=>{
+        navMenu.classList.remove('active')
+    })
+});
 
         // Progress Bar
         window.onscroll = function() {
@@ -1057,18 +1070,7 @@ var url = "https://wa.me/919663929707?text=" + text;
 window.open(url,"_blank");
 
 }
-// Responsive Menu Toggle Logic
-const menuToggle = document.getElementById('menuToggle');
-const navMenu = document.getElementById('navMenu');
 
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
-
-// Close menu on link click
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => navMenu.classList.remove('active'));
-});
 
     </script>
 </body>
