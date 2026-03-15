@@ -612,6 +612,15 @@
             border-top: 4px solid var(--accent);
         }
 
+        /* Centered Brand & Social Icons */
+        .footer-logo {
+            text-align: center; 
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* This centers the icons and text horizontally */
+        }
+        
+
         .footer-top {
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
@@ -619,19 +628,22 @@
             margin-bottom: 50px;
         }
 
-        .footer-logo h2 {
+.footer-logo h2 {
             color: var(--accent);
             font-family: 'Oswald', sans-serif;
             font-size: 28px;
             margin-bottom: 15px;
             text-transform: uppercase;
+            width: 100%; /* Ensures centering logic applies to full width */
         }
-
-        .footer-logo p {
+     .footer-logo p {
             color: #bdc3c7;
             font-size: 14px;
             margin-bottom: 25px;
             line-height: 1.8;
+            max-width: 320px; /* Keeps text in a professional block */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .footer-links h4 {
@@ -672,10 +684,12 @@
             padding-left: 8px;
         }
 
-        .social-links {
+  .social-links {
             display: flex;
             gap: 15px;
-            margin-top: 20px;
+            margin-top: 5px;
+            justify-content: center; /* This is what centers the icons */
+            width: 100%;
         }
 
         .social-icon {
