@@ -478,12 +478,12 @@
             gap: 15px;
         }
 
-        .industry-item:hover {
-            transform: translateY(-10px);
-            background: var(--primary);
-            color: var(--white);
-            box-shadow: var(--shadow-md);
-        }
+      .industry-item:hover:not(.active) {
+    transform: translateY(-10px);
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+}
         .industry-item.active {
     transform: translateY(-10px);
     background: var(--primary);
@@ -1080,23 +1080,28 @@ window.open(url,"_blank");
 
 const industryBoxes = document.querySelectorAll('.industry-item')
 
+let currentActive = null
+
 const industryObserver = new IntersectionObserver((entries)=>{
-    
+
     entries.forEach(entry=>{
-        
+
         if(entry.isIntersecting){
 
-            industryBoxes.forEach(box=>{
-                box.classList.remove('active')
-            })
+            if(currentActive){
+                currentActive.classList.remove('active')
+            }
 
             entry.target.classList.add('active')
+            currentActive = entry.target
 
         }
 
     })
 
-},{ threshold:0.6 })
+},{
+    threshold:0.7
+})
 
 industryBoxes.forEach(box=>{
     industryObserver.observe(box)
