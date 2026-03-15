@@ -1057,26 +1057,17 @@ var url = "https://wa.me/919663929707?text=" + text;
 window.open(url,"_blank");
 
 }
+// Responsive Menu Toggle Logic
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
 
-menuToggle.addEventListener('click', function () {
-
-    if (window.innerWidth <= 992) {   // only mobile
-        navMenu.classList.toggle('active');
-    }
-
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
 });
 
-// Close menu when clicking a link (mobile)
+// Close menu on link click
 document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-
-        if (window.innerWidth <= 992) {
-            navMenu.classList.remove('active');
-        }
-
-    });
+    link.addEventListener('click', () => navMenu.classList.remove('active'));
 });
 
     </script>
