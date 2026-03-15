@@ -1057,6 +1057,26 @@ var url = "https://wa.me/919663929707?text=" + text;
 window.open(url,"_blank");
 
 }
+
+const menuToggle = document.getElementById("menuToggle")
+const navMenu = document.getElementById("navMenu")
+
+menuToggle.addEventListener("click", function(e){
+    e.stopPropagation()
+    navMenu.classList.toggle("active")
+})
+
+document.addEventListener("click", function(event){
+
+    const isClickInsideMenu = navMenu.contains(event.target)
+    const isClickOnButton = menuToggle.contains(event.target)
+
+    if(!isClickInsideMenu && !isClickOnButton){
+        navMenu.classList.remove("active")
+    }
+
+})
+
     </script>
 </body>
 </html>
