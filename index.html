@@ -1077,22 +1077,26 @@ window.open(url,"_blank");
 
 }
 
-        // Activate industry boxes when scrolled into view
-
-const industryBoxes = document.querySelectorAll('.industry-item');
+      const industryBoxes = document.querySelectorAll('.industry-item')
 
 const industryObserver = new IntersectionObserver((entries)=>{
+    
     entries.forEach(entry=>{
+        
         if(entry.isIntersecting){
-            entry.target.classList.add('active');
+            entry.target.classList.add('active')
+        } 
+        else{
+            entry.target.classList.remove('active')
         }
-    });
-},{ threshold:0.3 });
+
+    })
+
+},{ threshold:0.6 })
 
 industryBoxes.forEach(box=>{
-    industryObserver.observe(box);
-});
-
+    industryObserver.observe(box)
+})
 
     </script>
 </body>
