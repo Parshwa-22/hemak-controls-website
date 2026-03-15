@@ -483,6 +483,7 @@
     background: var(--primary);
     color: var(--white);
     box-shadow: var(--shadow-md);
+          transition: all 0.35s ease;
 }
         .industry-item.active {
     transform: translateY(-10px);
@@ -1096,8 +1097,6 @@ industryBoxes.forEach(box => {
 
         this.classList.add("active")
         currentActive = this
-
-        // stop scroll behaviour after click
         isUserClicked = true
 
     })
@@ -1113,7 +1112,6 @@ const industryObserver = new IntersectionObserver((entries)=>{
 
         if(entry.isIntersecting){
 
-            // if user clicked, ignore scroll logic
             if(isUserClicked) return
 
             if(currentActive){
@@ -1133,6 +1131,31 @@ const industryObserver = new IntersectionObserver((entries)=>{
 
 industryBoxes.forEach(box=>{
     industryObserver.observe(box)
+})
+
+
+/* WHEN USER SCROLLS AGAIN */
+
+let lastScroll = window.scrollY
+
+window.addEventListener("scroll", () => {
+
+    if(Math.abs(window.scrollY - lastScroll) > 5){
+
+        if(isUserClicked){
+
+            industryBoxes.forEach(b=>{
+                b.classList.remove("active")
+            })
+
+            currentActive = null
+            isUserClicked = false
+        }
+
+    }
+
+    lastScroll = window.scrollY
+
 })
     </script>
 </body>
