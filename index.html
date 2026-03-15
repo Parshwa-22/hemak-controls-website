@@ -1141,6 +1141,12 @@ industryBoxes.forEach(box=>{
 window.addEventListener("scroll", () => {
 
     if(isUserClicked){
+
+        industryBoxes.forEach(box=>{
+            box.classList.remove("active")
+        })
+
+        currentActive = null
         isUserClicked = false
     }
 
