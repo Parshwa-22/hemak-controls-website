@@ -471,6 +471,7 @@
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
             border: 1px solid #f0f0f0;
+             cursor: pointer;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1078,16 +1079,20 @@ window.open(url,"_blank");
 }
 
       const industryBoxes = document.querySelectorAll('.industry-item')
+const industryBoxes = document.querySelectorAll('.industry-item')
 
 const industryObserver = new IntersectionObserver((entries)=>{
     
     entries.forEach(entry=>{
         
         if(entry.isIntersecting){
+
+            industryBoxes.forEach(box=>{
+                box.classList.remove('active')
+            })
+
             entry.target.classList.add('active')
-        } 
-        else{
-            entry.target.classList.remove('active')
+
         }
 
     })
