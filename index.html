@@ -1078,7 +1078,6 @@ var url = "https://wa.me/919663929707?text=" + text;
 window.open(url,"_blank");
 
 }
-
 const industryBoxes = document.querySelectorAll('.industry-item')
 
 let isUserClicked = false
@@ -1097,6 +1096,8 @@ industryBoxes.forEach(box => {
 
         this.classList.add("active")
         currentActive = this
+
+        // disable scroll highlight
         isUserClicked = true
 
     })
@@ -1112,11 +1113,12 @@ const industryObserver = new IntersectionObserver((entries)=>{
 
         if(entry.isIntersecting){
 
+            // ignore observer if user clicked
             if(isUserClicked) return
 
-            if(currentActive){
-                currentActive.classList.remove("active")
-            }
+            industryBoxes.forEach(b=>{
+                b.classList.remove("active")
+            })
 
             entry.target.classList.add("active")
             currentActive = entry.target
@@ -1134,27 +1136,13 @@ industryBoxes.forEach(box=>{
 })
 
 
-/* WHEN USER SCROLLS AGAIN */
-
-let lastScroll = window.scrollY
+/* ENABLE SCROLL AGAIN WHEN USER SCROLLS */
 
 window.addEventListener("scroll", () => {
 
-    if(Math.abs(window.scrollY - lastScroll) > 5){
-
-        if(isUserClicked){
-
-            industryBoxes.forEach(b=>{
-                b.classList.remove("active")
-            })
-
-            currentActive = null
-            isUserClicked = false
-        }
-
+    if(isUserClicked){
+        isUserClicked = false
     }
-
-    lastScroll = window.scrollY
 
 })
     </script>
