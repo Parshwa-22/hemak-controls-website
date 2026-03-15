@@ -1083,6 +1083,7 @@ const industryBoxes = document.querySelectorAll('.industry-item')
 let isUserClicked = false
 let currentActive = null
 
+
 /* CLICK BEHAVIOUR */
 
 industryBoxes.forEach(box => {
@@ -1095,6 +1096,8 @@ industryBoxes.forEach(box => {
 
         this.classList.add("active")
         currentActive = this
+
+        // stop scroll behaviour after click
         isUserClicked = true
 
     })
@@ -1110,6 +1113,7 @@ const industryObserver = new IntersectionObserver((entries)=>{
 
         if(entry.isIntersecting){
 
+            // if user clicked, ignore scroll logic
             if(isUserClicked) return
 
             if(currentActive){
@@ -1129,24 +1133,6 @@ const industryObserver = new IntersectionObserver((entries)=>{
 
 industryBoxes.forEach(box=>{
     industryObserver.observe(box)
-})
-
-
-/* RESET CLICK WHEN USER SCROLLS */
-
-window.addEventListener("scroll", ()=>{
-
-    if(isUserClicked){
-
-        industryBoxes.forEach(b=>{
-            b.classList.remove("active")
-        })
-
-        currentActive = null
-        isUserClicked = false
-
-    }
-
 })
     </script>
 </body>
