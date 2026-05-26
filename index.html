@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -164,7 +163,7 @@
         }
 
         .logo-info h1 {
-            font-size: clamp(26px, 5.5vw, 42px); /* INCREASED FONT SIZE AS REQUESTED */
+            font-size: clamp(20px, 4vw, 32px);
             font-family: 'Oswald', sans-serif;
             color: var(--primary);
             letter-spacing: 1px;
@@ -173,12 +172,11 @@
         }
 
         .logo-info p {
-            font-size: clamp(14px, 2.5vw, 18px); /* INCREASED TAGLINE FONT SIZE AS REQUESTED */
+            font-size: clamp(10px, 2vw, 14px);
             text-transform: uppercase;
             font-weight: 700;
             color: var(--accent);
             letter-spacing: 2px;
-            margin-top: 3px;
         }
 
         .nav-menu {
@@ -242,7 +240,7 @@
         }
 
         .hero h2 {
-            font-size: clamp(11px, 2.2vw, 14px); /* REDUCED TEXT SIZE AS REQUESTED */
+            font-size: clamp(14px, 3vw, 18px);
             text-transform: uppercase;
             letter-spacing: 4px;
             color: var(--white);
@@ -251,7 +249,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(24px, 4.8vw, 45px); /* REDUCED TEXT SIZE AS REQUESTED */
+            font-size: clamp(30px, 6vw, 60px);
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 25px;
@@ -259,7 +257,7 @@
         }
 
         .hero p {
-            font-size: clamp(13px, 2vw, 15px); /* REDUCED TEXT SIZE AS REQUESTED */
+            font-size: clamp(15px, 2.5vw, 18px);
             max-width: 800px;
             margin: 0 auto 40px;
             color: #d1d9e0;
@@ -272,59 +270,62 @@
             margin-bottom: 50px;
             flex-wrap: wrap;
         }
+.trust-badge-card{
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 18px 28px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 220px;
+
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+   .trust-badge-card i{
+    font-size: 32px;
+    color: var(--accent);
+    transition: transform 0.35s ease;
+}
+.trust-badge-card:hover{
+    transform: translateY(-12px);
+    box-shadow: 0 22px 45px rgba(0,0,0,0.20);
+}
+
+.trust-badge-card:hover i{
+    transform: scale(1.15);
+}
+
+      @keyframes badgeFadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    100%{
+        opacity:1;
+        transform:none;
+    }
+}
         .trust-badge-card{
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 18px 28px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            min-width: 220px;
-            transition: transform 0.45s ease, box-shadow 0.45s ease;
-        }
 
-        .trust-badge-card i{
-            font-size: 32px;
-            color: var(--accent);
-            transition: transform 0.35s ease;
-        }
-        .trust-badge-card:hover{
-            transform: translateY(-12px);
-            box-shadow: 0 22px 45px rgba(0,0,0,0.20);
-        }
-
-        .trust-badge-card:hover i{
-            transform: scale(1.15);
-        }
-
-        @keyframes badgeFadeUp{
-            0%{
                 opacity:0;
-                transform:translateY(20px);
-            }
-            100%{
-                opacity:1;
-                transform:none;
-            }
-        }
-        .trust-badge-card{
-            opacity:0;
-            animation: badgeFadeUp 0.8s ease forwards;
-        }
+    animation: badgeFadeUp 0.8s ease forwards;
+  
+}
 
         .trust-badge-card:nth-child(1){
-            animation-delay:0.2s;
-        }
+    animation-delay:0.2s;
+}
 
-        .trust-badge-card:nth-child(2){
-            animation-delay:0.4s;
-        }
+.trust-badge-card:nth-child(2){
+    animation-delay:0.4s;
+}
 
-        .trust-badge-card:nth-child(3){
-            animation-delay:0.6s;
-        }
+.trust-badge-card:nth-child(3){
+    animation-delay:0.6s;
+}
         .badge-text { text-align: left; }
         .badge-text span { display: block; font-size: 10px; text-transform: uppercase; color: #ccc; }
         .badge-text strong { display: block; font-size: 15px; color: var(--white); }
@@ -385,22 +386,22 @@
             transition: var(--transition);
         }
         .stat-trust-box i{
-            font-size: 40px;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
 
-        .stat-trust-box .count{
-            font-size: 48px;
-            font-weight: 800;
-            color: var(--primary);
-        }
+.stat-trust-box .count{
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--primary);
+}
 
-        .stat-trust-box p{
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--text-muted);
-        }
+.stat-trust-box p{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
 
         /* =========================================
            6. TECHNICAL SPECIALISATIONS (IMAGE-ACCURATE)
@@ -524,26 +525,26 @@
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
             border: 1px solid #f0f0f0;
-            cursor: pointer;
+             cursor: pointer;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 15px;
         }
 
-        .industry-item:hover:not(.active) {
-            transform: translateY(-10px);
-            background: var(--primary);
-            color: var(--white);
-            box-shadow: var(--shadow-md);
-            transition: all 0.35s ease;
-        }
+      .industry-item:hover:not(.active) {
+    transform: translateY(-10px);
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+          transition: all 0.35s ease;
+}
         .industry-item.active {
-            transform: translateY(-10px);
-            background: var(--primary);
-            color: var(--white);
-            box-shadow: var(--shadow-md);
-        }
+    transform: translateY(-10px);
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+}
 
         .industry-item i {
             font-size: 40px;
@@ -599,6 +600,8 @@
             width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; outline: none;
         }
 
+
+
         /* =========================================
            9. PROFESSIONAL FOOTER STYLES
            ========================================= */
@@ -617,6 +620,7 @@
             align-items: center; /* This centers the icons and text horizontally */
         }
         
+
         .footer-top {
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
@@ -624,7 +628,7 @@
             margin-bottom: 50px;
         }
 
-        .footer-logo h2 {
+.footer-logo h2 {
             color: var(--accent);
             font-family: 'Oswald', sans-serif;
             font-size: 28px;
@@ -632,7 +636,7 @@
             text-transform: uppercase;
             width: 100%; /* Ensures centering logic applies to full width */
         }
-        .footer-logo p {
+     .footer-logo p {
             color: #bdc3c7;
             font-size: 14px;
             margin-bottom: 25px;
@@ -680,7 +684,7 @@
             padding-left: 8px;
         }
 
-        .social-links {
+  .social-links {
             display: flex;
             gap: 15px;
             margin-top: 5px;
@@ -777,6 +781,12 @@
             .footer-top { grid-template-columns: 1fr; }
             .footer-top div { text-align: center; }
             .footer-links h4::after { left: 50%; transform: translateX(-50%); }
+            .footer-top div { 
+                text-align: center; 
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         @media (max-width: 480px) {
@@ -865,12 +875,13 @@
 
             <div class="hero-btns">
                 <a href="#contact" class="btn btn-gold">Request A Technical Quote</a>
-                <a href="https://wa.me/919663929707?text=Hello%20Hemak%20Controls,%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20Electrical%20Control%20Panels%20and%20Industrial%20Automation%20solutions.%20Please%20share%20more%20details." 
-                   class="btn btn-wa" 
-                   style="background: var(--success); color: white;" 
-                   target="_blank">
-                    <i class="fab fa-whatsapp"></i> Chat with Sales
-                </a>
+              <a href="https://wa.me/919663929707?text=Hello%20Hemak%20Controls,%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20Electrical%20Control%20Panels%20and%20Industrial%20Automation%20solutions.%20Please%20share%20more%20details." 
+class="btn btn-wa" 
+style="background: var(--success); color: white;" 
+target="_blank">
+
+<i class="fab fa-whatsapp"></i> Chat with Sales
+</a>
             </div>
         </div>
     </section>
@@ -891,7 +902,8 @@
                         <h2>Our Engineering Legacy</h2>
                         <span style="margin: 0;"></span>
                     </div>
-                    <h3>Renowned Custom Panel Manufacturers in Belagavi</h3> <p>Located in Karnataka, Hemak Controls has built a solid reputation as a consistent performer in the electrical automation domain. We design and supply high-performance Electrical PLC Control Panels, Power Distribution Centers, and SCADA Systems.</p>
+                    <h3>Renowned Custom Panel Manufacturers in Belgaum</h3>
+                    <p>Located in Karnataka, Hemak Controls has built a solid reputation as a consistent performer in the electrical automation domain. We design and supply high-performance Electrical PLC Control Panels, Power Distribution Centers, and SCADA Systems.</p>
                     <p>Backed by a team of highly experienced professionals, we ensure rigorous quality checks for every unit. Our client-centric approach and industry-leading prices have earned us the trust of major government bodies.</p>
                     
                     <div class="stats-trust-container">
@@ -902,7 +914,8 @@
                         </div>
                         <div class="stat-trust-box">
                             <i class="fas fa-globe"></i>
-                            <h4 class="count" data-target="20">0</h4> <p>Global Industrial Clients</p>
+                            <h4 class="count" data-target="80">0</h4>
+                            <p>Global Industrial Clients</p>
                         </div>
                     </div>
                 </div>
@@ -914,6 +927,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Technical Specialisations</h2>
+                <p>Your Technical Specialisations</p>
                 <span></span>
             </div>
 
@@ -932,12 +946,12 @@
                         </div>
                     </div>
                     <ul class="spec-list">
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> PCC Panels</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> MCC Panels</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> Feeder Panels</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> APFC Panels</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> Soft Starter Panels</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> Bus Couplers</li>
+                       <li><span class="check"><i class="fas fa-check-circle"></i></span> PCC Panels</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> MCC Panels</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> Feeder Panels</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> APFC Panels</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> Soft Starter Panels</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> Bus Couplers</li>
                     </ul>
                 </div>
 
@@ -953,12 +967,12 @@
                         </div>
                     </div>
                     <ul class="spec-list">
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-server"></i> Siemens Simatic S7</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-microchip"></i> Mitsubishi Nexgenie</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-desktop"></i> SCADA Systems</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-tablet-alt"></i> HMI Visualization</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-pager"></i> VFD Drive Systems</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-code"></i> Logic Programming</li>
+                       <li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-server"></i> Siemens Simatic S7</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-microchip"></i> Mitsubishi Nexgenie</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-desktop"></i> SCADA Systems</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-tablet-alt"></i> HMI Visualization</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-pager"></i> VFD Drive Systems</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-code"></i> Logic Programming</li>
                     </ul>
                 </div>
 
@@ -972,11 +986,11 @@
                     </div>
                     <ul class="spec-list">
                         <li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-server"></i> Siemens Simatic S7</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-microchip"></i> Mitsubishi Nexgenie</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-desktop"></i> SCADA Systems</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-tablet-alt"></i> HMI Visualization</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-pager"></i> VFD Drive Systems</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-code"></i> Logic Programming</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-microchip"></i> Mitsubishi Nexgenie</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-desktop"></i> SCADA Systems</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-tablet-alt"></i> HMI Visualization</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-pager"></i> VFD Drive Systems</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> <i class="fas fa-code"></i> Logic Programming</li>
                     </ul>
                 </div>
 
@@ -990,11 +1004,11 @@
                     </div>
                     <ul class="spec-list">
                         <li><span class="check"><i class="fas fa-check-circle"></i></span> L&T Switchgears</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> Motor Starters</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> Wires and Cables</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> Metal Enclosures</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> Monitoring Parts</li>
-                        <li><span class="check"><i class="fas fa-check-circle"></i></span> Spare Components</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> Motor Starters</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> Wires and Cables</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> Metal Enclosures</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> Monitoring Parts</li>
+<li><span class="check"><i class="fas fa-check-circle"></i></span> Spare Components</li>
                     </ul>
                 </div>
             </div>
@@ -1024,7 +1038,7 @@
     <section class="sectors section-padding" style="background: #fdfdfd;">
         <div class="container">
             <div class="section-title">
-                <h2>Campuses We Power</h2>
+                <h2>Industries We Power</h2>
                 <p>Custom Solutions for Specialized Engineering Sectors</p>
                 <span></span>
             </div>
@@ -1035,65 +1049,87 @@
                 <div class="industry-item"><i class="fas fa-flask"></i><h4>Pharmaceutical Units</h4></div>
                 <div class="industry-item"><i class="fas fa-compress-arrows-alt"></i><h4>Hydraulic Press Operations</h4></div>
                 <div class="industry-item"><i class="fas fa-city"></i><h4>Infrastructure Development</h4></div>
-                <div class="industry-item"><i class="fas fa-candy-cane"></i><h4>Sugar Industries</h4></div> </div>
+            </div>
         </div>
     </section>
 
     <section class="brochure section-padding" style="background: var(--primary); color: white; text-align: center;">
-        <div class="container">
-            <i class="far fa-file-pdf" style="font-size: 60px; color: var(--accent); margin-bottom: 20px;"></i>
-            <h2>2026 Updated Company Profile</h2>
-            <p style="margin-bottom: 30px;">Download technical documentation and client lists.</p>
+    <div class="container">
+        <i class="far fa-file-pdf" style="font-size: 60px; color: var(--accent); margin-bottom: 20px;"></i>
+        <h2>2026 Updated Company Profile</h2>
+        <p style="margin-bottom: 30px;">Download technical documentation and client lists.</p>
 
-            <div class="hero-btns">
-                <a href="HEMAK%20CONTROLS%20UPDATED%20PROFILE.pdf" target="_blank" class="btn btn-gold">
-                    View Brochure Online
-                </a>
+        <div class="hero-btns">
 
-                <a href="HEMAK%20CONTROLS%20UPDATED%20PROFILE.pdf" download class="btn" style="border: 2px solid white; color: white;">
-                    Download PDF Document
-                </a>
-            </div>
+            <!-- View PDF in Browser -->
+            <a href="HEMAK%20CONTROLS%20UPDATED%20PROFILE.pdf" target="_blank" class="btn btn-gold">
+                View Brochure Online
+            </a>
+
+            <!-- Download PDF -->
+            <a href="HEMAK%20CONTROLS%20UPDATED%20PROFILE.pdf" download class="btn" style="border: 2px solid white; color: white;">
+                Download PDF Document
+            </a>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <section class="contact section-padding" id="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info-panel" style="background: var(--primary); color: white; padding: 40px; border-radius: 15px;">
-                    <h2 style="color: var(--accent); margin-bottom: 25px;">Let's Talk Technology</h2>
-                    <div style="margin-bottom: 20px;"><i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 10px;"></i> 1st Cross, New Goods Shed Road, Chintamani Chambers, Belagavi, Karnataka - 590001</div>
-                    <div style="margin-bottom: 20px;"><i class="fas fa-user-shield" style="color: var(--accent); margin-right: 10px;"></i> Contact: Nitin D Budavi</div>
-                    <div style="margin-bottom: 20px;"><i class="fas fa-phone-alt" style="color: var(--accent); margin-right: 10px;"></i> +91 9663929707</div>
-                    <div style="margin-bottom: 20px;"><i class="fas fa-id-badge" style="color: var(--accent); margin-right: 10px;"></i> GSTIN: 29AMZPB5802A2Z3</div>
-                </div>
 
-                <div class="enquiry-form">
-                    <h3>Submit Your Requirement</h3>
-                    <form onsubmit="sendEnquiry(event)">
-                        <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" id="name" placeholder="Varad Sanjay Nakate">
-                        </div>
+    <div class="container">
 
-                        <div class="form-group">
-                            <label>Mobile Number</label>
-                            <input type="tel" id="phone" placeholder="+91">
-                        </div>
+        <div class="contact-grid">
 
-                        <div class="form-group">
-                            <label>Message</label>
-                            <textarea id="message" rows="4" placeholder="Describe requirement..."></textarea>
-                        </div>
+            <div class="contact-info-panel" style="background: var(--primary); color: white; padding: 40px; border-radius: 15px;">
 
-                        <button type="submit" class="btn btn-navy" style="width: 100%;">Submit Enquiry</button>
-                    </form>
-                </div>
+                <h2 style="color: var(--accent); margin-bottom: 25px;">Let's Talk Technology</h2>
+
+                <div style="margin-bottom: 20px;"><i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 10px;"></i> 1st Cross, New Goods Shed Road, Chintamani Chambers, Belagavi, Karnataka - 590001</div>
+
+                <div style="margin-bottom: 20px;"><i class="fas fa-user-shield" style="color: var(--accent); margin-right: 10px;"></i> Contact: Nitin D Budavi</div>
+
+                <div style="margin-bottom: 20px;"><i class="fas fa-phone-alt" style="color: var(--accent); margin-right: 10px;"></i> +91 9663929707</div>
+
+                <div style="margin-bottom: 20px;"><i class="fas fa-id-badge" style="color: var(--accent); margin-right: 10px;"></i> GSTIN: 29AMZPB5802A2Z3</div>
+
             </div>
-        </div>
-    </section>
 
-    <footer>
+
+            <div class="enquiry-form">
+
+                <h3>Submit Your Requirement</h3>
+
+                <form onsubmit="sendEnquiry(event)">
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="name" placeholder="Varad Sanjay Nakate">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="tel" id="phone" placeholder="+91">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="message" rows="4" placeholder="Describe requirement..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-navy" style="width: 100%;">Submit Enquiry</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+   <footer>
         <div class="container">
             <div class="footer-top">
                 <div class="footer-logo">
@@ -1144,7 +1180,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>© 2026 Hemak Controls. All Rights Reserved. | Designed for Engineering Excellence</p>
+                <p>&copy; 2026 Hemak Controls. All Rights Reserved. | Designed for Engineering Excellence</p>
             </div>
         </div>
     </footer>
@@ -1152,34 +1188,36 @@
     <div class="floating-action">
         <a href="tel:9663929707" class="float-btn float-call"><i class="fas fa-phone-alt"></i></a>
         <a href="https://wa.me/919663929707?text=Hello%20Hemak%20Controls,%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20Electrical%20Control%20Panels%20and%20Industrial%20Automation%20solutions.%20Please%20share%20more%20details." class="float-btn float-wa">
-            <i class="fab fa-whatsapp"></i>
-        </a>
+    <i class="fab fa-whatsapp"></i>
+</a>
     </div>
 
     <script>
-        const menuToggle = document.getElementById('menuToggle')
-        const navMenu = document.getElementById('navMenu')
+       const menuToggle = document.getElementById('menuToggle')
+const navMenu = document.getElementById('navMenu')
 
-        menuToggle.addEventListener('click', function(e){
-            e.stopPropagation()
-            navMenu.classList.toggle('active')
-        })
+menuToggle.addEventListener('click', function(e){
+    e.stopPropagation()
+    navMenu.classList.toggle('active')
+})
 
-        document.addEventListener('click', function(e){
-            const clickInsideMenu = navMenu.contains(e.target)
-            const clickOnButton = menuToggle.contains(e.target)
+document.addEventListener('click', function(e){
 
-            if(!clickInsideMenu && !clickOnButton){
-                navMenu.classList.remove('active')
-            }
-        })
+    const clickInsideMenu = navMenu.contains(e.target)
+    const clickOnButton = menuToggle.contains(e.target)
 
-        // Close when clicking menu links
-        document.querySelectorAll('.nav-menu a').forEach(link=>{
-            link.addEventListener('click', ()=>{
-                navMenu.classList.remove('active')
-            })
-        });
+    if(!clickInsideMenu && !clickOnButton){
+        navMenu.classList.remove('active')
+    }
+
+})
+
+// Close when clicking menu links
+document.querySelectorAll('.nav-menu a').forEach(link=>{
+    link.addEventListener('click', ()=>{
+        navMenu.classList.remove('active')
+    })
+});
 
         // Progress Bar
         window.onscroll = function() {
@@ -1210,90 +1248,114 @@
         });
         counters.forEach(c => observer.observe(c));
 
-        function sendEnquiry(event){
-            event.preventDefault();
 
-            var name = document.getElementById("name").value.trim();
-            var phone = document.getElementById("phone").value.trim();
-            var message = document.getElementById("message").value.trim();
+function sendEnquiry(event){
 
-            if(name === ""){
-                alert("Please enter your Full Name");
-                return;
-            }
+event.preventDefault();
 
-            if(phone === ""){
-                alert("Please enter your Mobile Number");
-                return;
-            }
+var name = document.getElementById("name").value.trim();
+var phone = document.getElementById("phone").value.trim();
+var message = document.getElementById("message").value.trim();
 
-            if(!/^[0-9]{10}$/.test(phone)){
-                alert("Please enter a valid 10 digit Mobile Number");
-                return;
-            }
+if(name === ""){
+alert("Please enter your Full Name");
+return;
+}
 
-            var text =
-            "New Website Enquiry%0A%0A"+
-            "Name: " + name + "%0A"+
-            "Phone: " + phone + "%0A"+
-            "Message: " + message;
+if(phone === ""){
+alert("Please enter your Mobile Number");
+return;
+}
 
-            var url = "https://wa.me/919663929707?text=" + text;
-            window.open(url,"_blank");
+if(!/^[0-9]{10}$/.test(phone)){
+alert("Please enter a valid 10 digit Mobile Number");
+return;
+}
+
+var text =
+"New Website Enquiry%0A%0A"+
+"Name: " + name + "%0A"+
+"Phone: " + phone + "%0A"+
+"Message: " + message;
+
+var url = "https://wa.me/919663929707?text=" + text;
+
+window.open(url,"_blank");
+
+}
+const industryBoxes = document.querySelectorAll('.industry-item')
+
+let isUserClicked = false
+let currentActive = null
+
+
+/* CLICK BEHAVIOUR */
+
+industryBoxes.forEach(box => {
+
+    box.addEventListener("click", function(){
+
+        industryBoxes.forEach(b=>{
+            b.classList.remove("active")
+        })
+
+        this.classList.add("active")
+        currentActive = this
+
+        // disable scroll highlight
+        isUserClicked = true
+
+    })
+
+})
+
+
+/* SCROLL BEHAVIOUR */
+
+const industryObserver = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            // ignore observer if user clicked
+            if(isUserClicked) return
+
+            industryBoxes.forEach(b=>{
+                b.classList.remove("active")
+            })
+
+            entry.target.classList.add("active")
+            currentActive = entry.target
+
         }
 
-        const industryBoxes = document.querySelectorAll('.industry-item')
-        let isUserClicked = false
-        let currentActive = null
+    })
 
-        /* CLICK BEHAVIOUR */
-        industryBoxes.forEach(box => {
-            box.addEventListener("click", function(){
-                industryBoxes.forEach(b=>{
-                    b.classList.remove("active")
-                })
+},{
+    threshold:0.7
+})
 
-                this.classList.add("active")
-                currentActive = this
-                isUserClicked = true
-            })
-        })
+industryBoxes.forEach(box=>{
+    industryObserver.observe(box)
+})
 
-        /* SCROLL BEHAVIOUR */
-        const industryObserver = new IntersectionObserver((entries)=>{
-            entries.forEach(entry=>{
-                if(entry.isIntersecting){
-                    if(isUserClicked) return
 
-                    industryBoxes.forEach(b=>{
-                        b.classList.remove("active")
-                    })
+/* ENABLE SCROLL AGAIN WHEN USER SCROLLS */
 
-                    entry.target.classList.add("active")
-                    currentActive = entry.target
-                }
-            })
-        },{
-            threshold:0.7
-        })
+window.addEventListener("scroll", () => {
+
+    if(isUserClicked){
 
         industryBoxes.forEach(box=>{
-            industryObserver.observe(box)
+            box.classList.remove("active")
         })
 
-        /* ENABLE SCROLL AGAIN WHEN USER SCROLLS */
-        window.addEventListener("scroll", () => {
-            if(isUserClicked){
-                industryBoxes.forEach(box=>{
-                    box.classList.remove("active")
-                })
+        currentActive = null
+        isUserClicked = false
+    }
 
-                currentActive = null
-                isUserClicked = false
-            }
-        })
+})
     </script>
 </body>
 </html>
-
-```
