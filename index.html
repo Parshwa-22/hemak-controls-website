@@ -11,15 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <style>
-        /* =========================================
-           1. CORE SYSTEM & VARIABLES
-           ========================================= 
-        */
         :root {
-            --primary: #0A2540;       /* Deep Industrial Navy */
-            --accent: #F4B400;        /* Safety Gold */
+            --primary: #0A2540;
+            --accent: #F4B400;
             --accent-light: #FFD700;
-            --success: #25D366;       /* WhatsApp Green */
+            --success: #25D366;
             --text-main: #1A1A1A;
             --text-muted: #555555;
             --bg-light: #F4F7F9;
@@ -50,10 +46,6 @@
             width: 100%;
         }
 
-        /* =========================================
-           2. REUSABLE COMPONENTS
-           ========================================= 
-        */
         .container {
             max-width: 1300px;
             margin: 0 auto;
@@ -127,10 +119,6 @@
             transform: translateY(-5px);
         }
 
-        /* =========================================
-           3. NAVIGATION BAR (FIXED & RESPONSIVE)
-           ========================================= 
-        */
         header {
             width: 100%;
             height: var(--header-height);
@@ -163,7 +151,7 @@
         }
 
         .logo-info h1 {
-            font-size: clamp(20px, 4vw, 32px);
+            font-size: clamp(26px, 4.5vw, 40px);
             font-family: 'Oswald', sans-serif;
             color: var(--primary);
             letter-spacing: 1px;
@@ -172,7 +160,7 @@
         }
 
         .logo-info p {
-            font-size: clamp(10px, 2vw, 14px);
+            font-size: clamp(13px, 2.2vw, 17px);
             text-transform: uppercase;
             font-weight: 700;
             color: var(--accent);
@@ -198,7 +186,6 @@
             color: var(--accent);
         }
 
-        /* Mobile Menu Toggle */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -218,10 +205,6 @@
             transition: var(--transition);
         }
 
-        /* =========================================
-           4. HERO SECTION
-           ========================================= 
-        */
         .hero {
             min-height: 100vh;
             background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), url('hero-bg.jpg') center/cover no-repeat;
@@ -240,7 +223,7 @@
         }
 
         .hero h2 {
-            font-size: clamp(14px, 3vw, 18px);
+            font-size: clamp(12px, 2.2vw, 15px);
             text-transform: uppercase;
             letter-spacing: 4px;
             color: var(--white);
@@ -249,7 +232,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(30px, 6vw, 60px);
+            font-size: clamp(24px, 4.5vw, 48px);
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 25px;
@@ -257,7 +240,7 @@
         }
 
         .hero p {
-            font-size: clamp(15px, 2.5vw, 18px);
+            font-size: clamp(13px, 2vw, 15px);
             max-width: 800px;
             margin: 0 auto 40px;
             color: #d1d9e0;
@@ -270,62 +253,49 @@
             margin-bottom: 50px;
             flex-wrap: wrap;
         }
-.trust-badge-card{
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255,255,255,0.2);
-    padding: 18px 28px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    min-width: 220px;
 
-    transition: transform 0.45s ease, box-shadow 0.45s ease;
-}
-
-   .trust-badge-card i{
-    font-size: 32px;
-    color: var(--accent);
-    transition: transform 0.35s ease;
-}
-.trust-badge-card:hover{
-    transform: translateY(-12px);
-    box-shadow: 0 22px 45px rgba(0,0,0,0.20);
-}
-
-.trust-badge-card:hover i{
-    transform: scale(1.15);
-}
-
-      @keyframes badgeFadeUp{
-    0%{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    100%{
-        opacity:1;
-        transform:none;
-    }
-}
         .trust-badge-card{
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 18px 28px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            min-width: 220px;
+            transition: transform 0.45s ease, box-shadow 0.45s ease;
+        }
 
-                opacity:0;
-    animation: badgeFadeUp 0.8s ease forwards;
-  
-}
+        .trust-badge-card i{
+            font-size: 32px;
+            color: var(--accent);
+            transition: transform 0.35s ease;
+        }
 
-        .trust-badge-card:nth-child(1){
-    animation-delay:0.2s;
-}
+        .trust-badge-card:hover{
+            transform: translateY(-12px);
+            box-shadow: 0 22px 45px rgba(0,0,0,0.20);
+        }
 
-.trust-badge-card:nth-child(2){
-    animation-delay:0.4s;
-}
+        .trust-badge-card:hover i{
+            transform: scale(1.15);
+        }
 
-.trust-badge-card:nth-child(3){
-    animation-delay:0.6s;
-}
+        @keyframes badgeFadeUp{
+            0%{ opacity:0; transform:translateY(20px); }
+            100%{ opacity:1; transform:none; }
+        }
+
+        .trust-badge-card{
+            opacity:0;
+            animation: badgeFadeUp 0.8s ease forwards;
+        }
+
+        .trust-badge-card:nth-child(1){ animation-delay:0.2s; }
+        .trust-badge-card:nth-child(2){ animation-delay:0.4s; }
+        .trust-badge-card:nth-child(3){ animation-delay:0.6s; }
+
         .badge-text { text-align: left; }
         .badge-text span { display: block; font-size: 10px; text-transform: uppercase; color: #ccc; }
         .badge-text strong { display: block; font-size: 15px; color: var(--white); }
@@ -337,10 +307,6 @@
             flex-wrap: wrap;
         }
 
-        /* =========================================
-           5. ABOUT SECTION
-           ========================================= 
-        */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -385,28 +351,25 @@
             border-top: 4px solid var(--primary);
             transition: var(--transition);
         }
+
         .stat-trust-box i{
-    font-size: 40px;
-    color: var(--primary);
-    margin-bottom: 10px;
-}
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
 
-.stat-trust-box .count{
-    font-size: 48px;
-    font-weight: 800;
-    color: var(--primary);
-}
+        .stat-trust-box .count{
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--primary);
+        }
 
-.stat-trust-box p{
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--text-muted);
-}
+        .stat-trust-box p{
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
 
-        /* =========================================
-           6. TECHNICAL SPECIALISATIONS (IMAGE-ACCURATE)
-           ========================================= 
-        */
         .specialisations-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -452,7 +415,6 @@
             text-transform: uppercase;
         }
 
-        /* Icons Group from Image */
         .spec-mini-icons {
             display: flex;
             gap: 12px;
@@ -500,16 +462,11 @@
             font-size: 18px;
         }
 
-        /* Specific styles for card colors/accents */
         .card-power { border-left: 8px solid var(--accent); }
         .card-auto { border-left: 8px solid #3498db; }
         .card-machinery { border-left: 8px solid #7f8c8d; }
         .card-supply { border-left: 8px solid var(--primary); }
 
-        /* =========================================
-           7. INDUSTRIES WE POWER (ATTRACTIVE)
-           ========================================= 
-        */
         .industries-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -525,26 +482,27 @@
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
             border: 1px solid #f0f0f0;
-             cursor: pointer;
+            cursor: pointer;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 15px;
         }
 
-      .industry-item:hover:not(.active) {
-    transform: translateY(-10px);
-    background: var(--primary);
-    color: var(--white);
-    box-shadow: var(--shadow-md);
-          transition: all 0.35s ease;
-}
+        .industry-item:hover:not(.active) {
+            transform: translateY(-10px);
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+            transition: all 0.35s ease;
+        }
+
         .industry-item.active {
-    transform: translateY(-10px);
-    background: var(--primary);
-    color: var(--white);
-    box-shadow: var(--shadow-md);
-}
+            transform: translateY(-10px);
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
 
         .industry-item i {
             font-size: 40px;
@@ -557,10 +515,6 @@
             text-transform: uppercase;
         }
 
-        /* =========================================
-           8. GALLERY & PORTFOLIO
-           ========================================= 
-        */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -577,10 +531,6 @@
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
         .gallery-item:hover img { transform: scale(1.1); }
 
-        /* =========================================
-           9. CONTACT & FOOTER
-           ========================================= 
-        */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
@@ -600,11 +550,6 @@
             width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; outline: none;
         }
 
-
-
-        /* =========================================
-           9. PROFESSIONAL FOOTER STYLES
-           ========================================= */
         footer { 
             background: #051626; 
             color: #ffffff; 
@@ -612,14 +557,12 @@
             border-top: 4px solid var(--accent);
         }
 
-        /* Centered Brand & Social Icons */
         .footer-logo {
             text-align: center; 
             display: flex;
             flex-direction: column;
-            align-items: center; /* This centers the icons and text horizontally */
+            align-items: center;
         }
-        
 
         .footer-top {
             display: grid;
@@ -628,20 +571,21 @@
             margin-bottom: 50px;
         }
 
-.footer-logo h2 {
+        .footer-logo h2 {
             color: var(--accent);
             font-family: 'Oswald', sans-serif;
             font-size: 28px;
             margin-bottom: 15px;
             text-transform: uppercase;
-            width: 100%; /* Ensures centering logic applies to full width */
+            width: 100%;
         }
-     .footer-logo p {
+
+        .footer-logo p {
             color: #bdc3c7;
             font-size: 14px;
             margin-bottom: 25px;
             line-height: 1.8;
-            max-width: 320px; /* Keeps text in a professional block */
+            max-width: 320px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -684,11 +628,11 @@
             padding-left: 8px;
         }
 
-  .social-links {
+        .social-links {
             display: flex;
             gap: 15px;
             margin-top: 5px;
-            justify-content: center; /* This is what centers the icons */
+            justify-content: center;
             width: 100%;
         }
 
@@ -713,7 +657,6 @@
             border-color: var(--accent);
         }
 
-        /* Responsive Map Container */
         .footer-links iframe {
             border-radius: 12px;
             border: 1px solid rgba(255,255,255,0.1);
@@ -734,10 +677,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* =========================================
-           10. STARK RESPONSIVENESS (STRICT)
-           ========================================= 
-        */
         @media (max-width: 1200px) {
             .gallery-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-top { grid-template-columns: 1fr 1fr; }
@@ -795,7 +734,6 @@
             .logo-wrapper img { height: 50px; }
         }
 
-        /* Floating elements */
         .floating-action {
             position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 3000;
         }
@@ -847,23 +785,17 @@
         <div class="hero-inner animate__animated animate__fadeIn">
             <h2>Welcome to Hemak Controls</h2>
             <h1>Innovative Electrical Control & Automation Excellence</h1>
-            <p>Class One & G1 Licensed Government Electrical Contractors specialising in LT/HT Industrial Control Panels, SCADA, and PLC Systems.</p>
+            <p>Class One Government Licensed Electrical Contractors – Experts in LT/HT Industrial Works.</p>
             
             <div class="hero-badges">
                 <div class="trust-badge-card">
                     <i class="fas fa-shield-alt"></i>
                     <div class="badge-text">
                         <span>Certified Authority</span>
-                        <strong>G1 Govt Contractor</strong>
+                        <strong>Class One Government Contractor</strong>
                     </div>
                 </div>
-                <div class="trust-badge-card">
-                    <i class="fas fa-certificate"></i>
-                    <div class="badge-text">
-                        <span>Assured Excellence</span>
-                        <strong>ISO Quality Standard</strong>
-                    </div>
-                </div>
+
                 <div class="trust-badge-card">
                     <i class="fas fa-briefcase"></i>
                     <div class="badge-text">
@@ -879,7 +811,6 @@
 class="btn btn-wa" 
 style="background: var(--success); color: white;" 
 target="_blank">
-
 <i class="fab fa-whatsapp"></i> Chat with Sales
 </a>
             </div>
@@ -902,7 +833,7 @@ target="_blank">
                         <h2>Our Engineering Legacy</h2>
                         <span style="margin: 0;"></span>
                     </div>
-                    <h3>Renowned Custom Panel Manufacturers in Belgaum</h3>
+                    <h3>Renowned Custom Panel Manufacturers in Belagavi</h3>
                     <p>Located in Karnataka, Hemak Controls has built a solid reputation as a consistent performer in the electrical automation domain. We design and supply high-performance Electrical PLC Control Panels, Power Distribution Centers, and SCADA Systems.</p>
                     <p>Backed by a team of highly experienced professionals, we ensure rigorous quality checks for every unit. Our client-centric approach and industry-leading prices have earned us the trust of major government bodies.</p>
                     
@@ -914,7 +845,7 @@ target="_blank">
                         </div>
                         <div class="stat-trust-box">
                             <i class="fas fa-globe"></i>
-                            <h4 class="count" data-target="80">0</h4>
+                            <h4 class="count" data-target="20">0</h4>
                             <p>Global Industrial Clients</p>
                         </div>
                     </div>
@@ -927,7 +858,6 @@ target="_blank">
         <div class="container">
             <div class="section-title">
                 <h2>Our Technical Specialisations</h2>
-                <p>Your Technical Specialisations</p>
                 <span></span>
             </div>
 
@@ -1049,6 +979,7 @@ target="_blank">
                 <div class="industry-item"><i class="fas fa-flask"></i><h4>Pharmaceutical Units</h4></div>
                 <div class="industry-item"><i class="fas fa-compress-arrows-alt"></i><h4>Hydraulic Press Operations</h4></div>
                 <div class="industry-item"><i class="fas fa-city"></i><h4>Infrastructure Development</h4></div>
+                <div class="industry-item"><i class="fas fa-seedling"></i><h4>Sugar Industries</h4></div>
             </div>
         </div>
     </section>
@@ -1060,73 +991,47 @@ target="_blank">
         <p style="margin-bottom: 30px;">Download technical documentation and client lists.</p>
 
         <div class="hero-btns">
-
-            <!-- View PDF in Browser -->
             <a href="HEMAK%20CONTROLS%20UPDATED%20PROFILE.pdf" target="_blank" class="btn btn-gold">
                 View Brochure Online
             </a>
-
-            <!-- Download PDF -->
             <a href="HEMAK%20CONTROLS%20UPDATED%20PROFILE.pdf" download class="btn" style="border: 2px solid white; color: white;">
                 Download PDF Document
             </a>
-
         </div>
     </div>
 </section>
 
     <section class="contact section-padding" id="contact">
-
     <div class="container">
-
         <div class="contact-grid">
-
             <div class="contact-info-panel" style="background: var(--primary); color: white; padding: 40px; border-radius: 15px;">
-
                 <h2 style="color: var(--accent); margin-bottom: 25px;">Let's Talk Technology</h2>
-
                 <div style="margin-bottom: 20px;"><i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 10px;"></i> 1st Cross, New Goods Shed Road, Chintamani Chambers, Belagavi, Karnataka - 590001</div>
-
                 <div style="margin-bottom: 20px;"><i class="fas fa-user-shield" style="color: var(--accent); margin-right: 10px;"></i> Contact: Nitin D Budavi</div>
-
                 <div style="margin-bottom: 20px;"><i class="fas fa-phone-alt" style="color: var(--accent); margin-right: 10px;"></i> +91 9663929707</div>
-
                 <div style="margin-bottom: 20px;"><i class="fas fa-id-badge" style="color: var(--accent); margin-right: 10px;"></i> GSTIN: 29AMZPB5802A2Z3</div>
-
             </div>
 
-
             <div class="enquiry-form">
-
                 <h3>Submit Your Requirement</h3>
-
                 <form onsubmit="sendEnquiry(event)">
-
                     <div class="form-group">
                         <label>Full Name</label>
                         <input type="text" id="name" placeholder="Varad Sanjay Nakate">
                     </div>
-
                     <div class="form-group">
                         <label>Mobile Number</label>
                         <input type="tel" id="phone" placeholder="+91">
                     </div>
-
                     <div class="form-group">
                         <label>Message</label>
                         <textarea id="message" rows="4" placeholder="Describe requirement..."></textarea>
                     </div>
-
                     <button type="submit" class="btn btn-navy" style="width: 100%;">Submit Enquiry</button>
-
                 </form>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
    <footer>
@@ -1212,14 +1117,12 @@ document.addEventListener('click', function(e){
 
 })
 
-// Close when clicking menu links
 document.querySelectorAll('.nav-menu a').forEach(link=>{
     link.addEventListener('click', ()=>{
         navMenu.classList.remove('active')
     })
 });
 
-        // Progress Bar
         window.onscroll = function() {
             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -1227,7 +1130,6 @@ document.querySelectorAll('.nav-menu a').forEach(link=>{
             document.getElementById("progressBar").style.width = scrolled + "%";
         };
 
-        // Counter Animation
         const counters = document.querySelectorAll('.count');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1288,9 +1190,6 @@ const industryBoxes = document.querySelectorAll('.industry-item')
 let isUserClicked = false
 let currentActive = null
 
-
-/* CLICK BEHAVIOUR */
-
 industryBoxes.forEach(box => {
 
     box.addEventListener("click", function(){
@@ -1302,15 +1201,11 @@ industryBoxes.forEach(box => {
         this.classList.add("active")
         currentActive = this
 
-        // disable scroll highlight
         isUserClicked = true
 
     })
 
 })
-
-
-/* SCROLL BEHAVIOUR */
 
 const industryObserver = new IntersectionObserver((entries)=>{
 
@@ -1318,7 +1213,6 @@ const industryObserver = new IntersectionObserver((entries)=>{
 
         if(entry.isIntersecting){
 
-            // ignore observer if user clicked
             if(isUserClicked) return
 
             industryBoxes.forEach(b=>{
@@ -1339,9 +1233,6 @@ const industryObserver = new IntersectionObserver((entries)=>{
 industryBoxes.forEach(box=>{
     industryObserver.observe(box)
 })
-
-
-/* ENABLE SCROLL AGAIN WHEN USER SCROLLS */
 
 window.addEventListener("scroll", () => {
 
